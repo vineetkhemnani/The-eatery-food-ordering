@@ -11,7 +11,7 @@ import Contact from './components/Contact';
 import RestaurantMenu from './components/RestaurantMenu';
 import Profile from './components/Profile';
 import Shimmer from './components/Shimmer';
-import UserContext from './utils/userContext';
+import UserContext from './utils/userContext.js';
 import { Provider } from 'react-redux';
 import store from './utils/store';
 import Cart from './components/Cart.js'
