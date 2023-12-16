@@ -23,11 +23,11 @@ const Body = () => {
   }, [])
   async function getRestaurants() {
     const data = await fetch(
-      'https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.2074205&lng=78.01525769999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING#'
+      'https://the-eatery-backend.onrender.com/api/restaurants'
     )
     // console.log(data)
     const json = await data.json()
-    console.log(json)
+    // console.log(json)
     setAllRestaurants(
       // optional chaining
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
