@@ -26,7 +26,7 @@ const useRestaurant = (id) => {
       const restaurantId = id
 
       // Append the restaurantId to the URL as a query parameter
-      const apiUrl = `https://the-eatery-backend.onrender.com/restaurant/menu?restaurantId=${restaurantId}`
+      const apiUrl = `https://the-eatery-backend.vercel.app/restaurant/menu?restaurantId=${restaurantId}`
 
       // Make a GET request to the backend API
       await fetch(apiUrl)

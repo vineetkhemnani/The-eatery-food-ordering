@@ -23,11 +23,11 @@ const Body = () => {
   }, [])
   async function getRestaurants() {
     const data = await fetch(
-      'https://the-eatery-backend.onrender.com/api/restaurants'
+      'https://the-eatery-backend.vercel.app/api/restaurants'
     )
     // console.log(data)
     const json = await data.json()
-    // console.log(json)
+    console.log(json)
     setAllRestaurants(
       // optional chaining
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
