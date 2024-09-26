@@ -36,10 +36,10 @@ const useRestaurant = (id) => {
           // console.log(data)
           const json = data
           const itemCards =
-            json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card
-              ?.card?.itemCards
-          // console.log(json.data.cards);
-          setRestaurant(json?.data?.cards[0]?.card?.card?.info)
+            json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]
+              ?.card?.card?.itemCards
+          // console.log(json?.data.cards[2].card.card.info);
+          setRestaurant(json?.data?.cards[2]?.card?.card?.info)
           setRestaurantMenu(itemCards)
           console.log(itemCards)
         })

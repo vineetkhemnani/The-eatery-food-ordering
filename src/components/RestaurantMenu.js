@@ -13,6 +13,8 @@ const RestaurantMenu = () => {
 
   const restaurant = useRestaurant(id)[0];
   const restaurantMenu = useRestaurant(id)[1];
+
+  console.log(restaurant)
   
   const dispatch = useDispatch();
   const addFoodItem = (item) => {
@@ -29,7 +31,7 @@ const RestaurantMenu = () => {
   return !restaurant ? (
     <Shimmer />
   ) : (
-    <div className="menu flex">
+    <div className="menu flex m-10">
       <div>
         <h1>Restaurant id: {id}</h1>
         <h2 className="font-bold text-3xl mb-4">{restaurant?.name}</h2>
@@ -37,6 +39,7 @@ const RestaurantMenu = () => {
           id="restroImg"
           src={IMAGE_CDN_URL + restaurant?.cloudinaryImageId}
           alt=""
+          className='h-52'
         />
         <h2>{restaurant?.areaName}</h2>
         <div
