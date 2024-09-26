@@ -28,14 +28,24 @@ const Body = () => {
     // console.log(data)
     const json = await data.json()
     console.log(json)
-    setAllRestaurants(
-      // optional chaining
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    )
-    setFilteredRestaurants(
-      // optional chaining
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    )
+    setTimeout(() => {
+      setAllRestaurants(
+        // optional chaining
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants ||
+          json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+            ?.restaurants
+      )
+      console.log(
+        json.data.cards)
+      setFilteredRestaurants(
+        // optional chaining
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants ||
+          json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+            ?.restaurants
+      )
+    }, 3000)
   }
   // console.log("render");
   // not render component => Early return

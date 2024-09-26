@@ -1,6 +1,8 @@
-export const IMAGE_CDN_URL =
-  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"
 
+// export const IMAGE_CDN_URL =
+//   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"
+export const IMAGE_CDN_URL =
+  'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/'
 export const FETCH_MENU_URL =
   'https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=27.2074205&lng=78.01525769999999&restaurantId='
 
